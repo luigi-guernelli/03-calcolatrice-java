@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Calcolatrice Web</h2>
+
+  <div class="card p-4 shadow mx-auto" style="max-width: 400px;">
+
+    <div class="mb-3">
+      <label class="form-label">Primo numero</label>
+<input type="number" class="form-control" [(ngModel)]="numero1" name="numero1">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Operazione</label>
+<select class="form-select" [(ngModel)]="operazione" name="operazione">
+  <option value="add">+</option>
+  <option value="sub">−</option>
+  <option value="mul">×</option>
+  <option value="div">÷</option>
+  <option value="mod">%</option>
+  <option value="pow">^</option>
+  <option value="sqrt">√</option>
+</select>
+
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Secondo numero</label>
+      <input type="number" class="form-control" [(ngModel)]="numero2" [disabled]="operazione === 'sqrt'">
+    </div>
+
+    <div class="d-grid">
+      <button class="btn btn-primary" (click)="calcola()">
+  Calcola
+</button>
+
+    </div>
+
+  <div class="alert alert-info mt-3 text-center" *ngIf="risultato !== null">
+    Risultato: {{ risultato }}
+  </div>
+  
+  <div *ngIf="errore" class="alert alert-danger mt-3 text-center">
+    {{ errore }}
+  </div>
+  
+  </div>
+</div>
