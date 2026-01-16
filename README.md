@@ -11,5 +11,5 @@ Estensione delle funzionalità tramite l'uso della classe Math, con l'aggiunta d
 **:three: Calcolatrice Avanzata:**
 Versione più complessa, caratterizzata dall'utilizzo di costrutti e cicli annidati e dall'implementazione del simbolo **=** per confermare l'operazione e restituire il risultato all'utente, simulando il comportamento di una calcolatrice reale.
 
-**:four 4️⃣: Calcolatrice Web - Java Spring Boot & ANgular**
-Progetto didattico full stack che evolve una calcolatrice da applicazione console web application
+**:four:: Calcolatrice Web - Java Spring Boot & Angular**
+Progetto didattico full stack che evolve una calcolatrice da applicazione console web application.
