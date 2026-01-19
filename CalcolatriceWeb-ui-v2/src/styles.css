@@ -1,0 +1,82 @@
+.calculator-container {
+    position: relative;
+    width: 320px;
+    margin: 50px auto;
+}
+
+/* CALCOLATRICE */
+.calculator {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(145deg, #e6edf3, #f4f8fb);
+    border-radius: 14px;
+}
+
+/* DISPLAY */
+.display {
+    background-color: #3a506b;
+    color: #eaf2f8;
+    font-size: 2.2rem;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* CRONOLOGIA (DESTRA, DIETRO) */
+.cronologia {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    border-radius: 14px;
+    z-index: 1;
+
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+}
+
+.cronologia.open {
+    transform: translateX(0);
+}
+
+/* CRONOLOGIA UI */
+.cronologia-header {
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cronologia-body {
+    padding: 12px;
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.cronologia-item {
+    color: white;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* BOTTONI */
+.btn-number {
+    background-color: #dbe7f0;
+}
+
+.btn-operator {
+    background-color: #a7c7e7;
+}
+
+.btn-control {
+    background-color: #9aa5b1;
+    color: #fff;
+}
+
+.btn-equals {
+    background-color: #3a7ca5;
+    color: #fff;
+}

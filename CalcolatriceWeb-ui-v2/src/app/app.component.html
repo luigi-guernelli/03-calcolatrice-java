@@ -1,0 +1,52 @@
+<div class="calculator-container">
+
+  <!-- CRONOLOGIA -->
+  <div class="cronologia" [class.open]="showCronologia">
+
+    <div class="cronologia-header">
+      <span>Cronologia</span>
+    </div>
+
+    <div class="cronologia-body">
+
+      <button class="btn btn-sm btn-outline-light w-100 mb-2" (click)="clearCronologia()"
+        [disabled]="cronologia.length === 0">
+        🗑️ Elimina cronologia
+      </button>
+
+      <div *ngFor="let c of cronologia" class="cronologia-item">
+        {{ c }}
+      </div>
+
+      <div *ngIf="cronologia.length === 0" class="text-center text-muted mt-3">
+        Nessuna operazione registrata
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CALCOLATRICE -->
+  <div class="calculator card shadow">
+
+    <div class="display text-end">{{ display }}</div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger text-center py-1">
+      {{ errorMessage }}
+    </div>
+
+    <div class="text-end px-2 mb-2">
+      <button class="btn btn-sm btn-outline-secondary" (click)="toggleCronologia()">
+        {{ showCronologia ? '📂 Apri cronologia' : '❌ Chiudi cronologia' }}
+      </button>
+    </div>
+
+    <div class="row g-2 p-2">
+      <div class="col-3" *ngFor="let btn of buttons">
+        <button class="btn w-100" [ngClass]="btn.class" (click)="onButtonClick(btn.value)">
+          {{ btn.label }}
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
